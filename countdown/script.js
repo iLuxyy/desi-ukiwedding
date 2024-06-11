@@ -35,16 +35,11 @@ const countdownFunction = setInterval(() => {
         const pauseButton = document.getElementById('pauseButton');
         const audio = document.getElementById('audio');
 
+       
         toggleButton.addEventListener('click', () => {
-            if (hiddenContent.style.display === 'none' || hiddenContent.style.display === '') {
                 hiddenContent.style.display = 'block';
-                toggleButton.textContent = 'Tutup Undangan';
-                simplelistexample.style.display = 'none';
+                simplelistexample.classList.toggle('hidden');         
                 audio.play();
-            } else {
-                hiddenContent.style.display = 'none';
-                toggleButton.textContent = 'Lihat Undangan';   
-            }
         });
 
 // audio
